@@ -1,3 +1,92 @@
+/* 1. เปิดใช้ Smooth Scroll สำหรับทั้งหน้าเว็บเมื่อกด Anchor Link (#) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* เผื่อระยะไม่ให้ Navbar บังหัวข้อเวลา Scroll ลงมาถึง */
+#contact-section {
+    scroll-margin-top: 90px;
+}
+
+/* 2. ระบบ CSS Grid สำหรับการ์ดข้อมูล (Desktop เริ่มต้น: 4 การ์ด) */
+.responsive-card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 คอลัมน์บนจอคอมพิวเตอร์ */
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.info-card {
+    background: #ffffff;
+    border: 1px solid #eef2ef;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.info-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #1c3f2b;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: #556358;
+}
+
+/* 3. Responsive Breakpoints เมื่อย่อหน้าจอเล็กลง */
+
+/* แท็บเล็ต (Tablet): หน้าจอกว้างไม่เกิน 992px แสดง 2 การ์ด */
+@media (max-width: 992px) {
+    .responsive-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .header-nav {
+        padding: 15px 25px;
+    }
+}
+
+/* มือถือ (Mobile): หน้าจอกว้างไม่เกิน 576px แสดง 1 การ์ด และจัดสัดส่วนให้พอดีจอ */
+@media (max-width: 576px) {
+    .responsive-card-grid {
+        grid-template-columns: 1fr; /* 1 คอลัมน์เต็มความกว้าง */
+        gap: 14px;
+    }
+
+    .header-nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .hero-title {
+        font-size: 28px !important;
+    }
+
+    .hero-section {
+        padding: 40px 15px !important;
+    }
+
+    .card-section {
+        padding: 20px 15px;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        font-size: 16px; /* ป้องกันการซูมอัตโนมัติบน Safari iOS */
+    }
+}
 /* นำเข้าฟอนต์ Serif สวยๆ หรูหราแนวเดียวกับแบบ */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
 
