@@ -493,3 +493,47 @@ footer {
         gap: 15px;
     }
 }
+/* ==========================================
+   แก้ไขโปรไฟล์เมื่อเปิดบนมือถือ (หน้าจอเล็ก)
+   ========================================== */
+@media screen and (max-width: 600px) {
+
+    /* ปรับให้ตารางเปลี่ยนมาเรียงซ้อนแนวตั้ง (รูปอยู่บน ข้อความอยู่ล่าง) */
+    .profile-table, 
+    .profile-table tbody, 
+    .profile-table tr, 
+    .profile-table td {
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .profile-table td {
+        padding: 8px 10px !important;
+    }
+
+    /* จัดรูปให้อยู่ตรงกลางและปรับขนาดให้พอดี */
+    .profile-img {
+        width: 110px !important;
+        height: 110px !important;
+        margin: 0 auto 12px auto !important;
+    }
+
+    /* เอาช่องว่างด้านซ้ายออก และปรับขนาดฟอนต์ชื่อไม่ให้ล้น */
+    .profile-info {
+        padding-left: 0 !important;
+        text-align: center !important;
+    }
+
+    .profile-info h2 {
+        font-size: 22px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 8px !important;
+        word-break: keep-all; /* ป้องกันการตัดพยางค์แปลกๆ */
+    }
+
+    .profile-info p {
+        font-size: 14px !important;
+        margin-bottom: 4px !important;
+    }
+}
