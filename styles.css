@@ -384,3 +384,112 @@ footer {
     color: #7d8a81;
     margin-top: 15px;
 }
+/* ===================================================
+   Mobile Responsive: สำหรับหน้าจอโทรศัพท์ (ไม่เกิน 600px)
+   =================================================== */
+@media screen and (max-width: 600px) {
+
+    /* 1. ปรับขนาดระยะขอบโดยรวมไม่ให้ชิดขอบจอเกินไป */
+    body {
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 0 16px;
+        margin: 25px auto;
+    }
+
+    .card-section {
+        padding: 20px 16px;
+        border-radius: 12px;
+    }
+
+    /* 2. Header & Navbar: เรียงปุ่มลงมาให้อยู่ตรงกลาง กดง่ายด้วยนิ้วโป้ง */
+    .header-nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .header-nav .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    /* 3. ส่วนหัว Hero และ Profile Table */
+    .hero-section {
+        padding: 35px 15px !important;
+    }
+
+    .hero-title {
+        font-size: 26px !important;
+    }
+
+    /* ปรับตารางโปรไฟล์จากแนวนอน ให้กลายเป็นแนวตั้งบนมือถือ */
+    .profile-table, 
+    .profile-table tbody, 
+    .profile-table tr, 
+    .profile-table td {
+        display: block;
+        width: 100% !important;
+        text-align: center;
+        padding: 8px 0;
+    }
+
+    .profile-img {
+        margin: 0 auto 15px auto; /* จัดรูปกึ่งกลาง */
+        width: 110px;
+        height: 110px;
+    }
+
+    .profile-info {
+        padding-left: 0 !important; /* นำ padding ซ้ายออกเพื่อให้ตรงกลางสวยงาม */
+        text-align: center;
+    }
+
+    /* 4. ระบบ Grid การ์ด: แสดง 1 คอลัมน์เต็มความกว้าง */
+    .responsive-card-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+    }
+
+    /* 5. ตาราง Skills & Experience ให้เลื่อนแนวนอนได้ ไม่ดันจอแตก */
+    .skills-table, .exp-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto; /* เลื่อนซ้ายขวาได้หากข้อความยาว */
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
+
+    .skills-table td, .exp-table th, .exp-table td {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    /* 6. ฟอร์มติดต่อ (Input & ปุ่ม Submit) */
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        font-size: 16px; /* 16px ขึ้นไปจะช่วยไม่ให้ iPhone ซูมหน้าจอเองตอนกดพิมพ์ */
+        padding: 10px 16px;
+    }
+
+    .contact-form button[type="submit"] {
+        width: 100% !important; /* ยืดปุ่มเต็มความกว้างเพื่อกดง่ายขึ้น */
+        max-width: none !important;
+    }
+
+    /* 7. Footer */
+    .footer-links {
+        gap: 15px;
+    }
+}
