@@ -1,0 +1,297 @@
+/* นำเข้าฟอนต์ Serif สวยๆ หรูหราแนวเดียวกับแบบ */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #2b3a30;
+    background-color: #fcfbf7;
+    line-height: 1.7;
+}
+
+/* หัวข้อใช้ฟอนต์ Serif  */
+h1, h2, h3, .brand-logo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    color: #1c3f2b; /* สีเขียวเข้มธรรมชาติ */
+    font-weight: 600;
+}
+
+/* --- ส่วนหัว (Navbar) ด้านบน --- */
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #eae6df;
+}
+
+.brand-logo {
+    font-size: 24px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* ปุ่มสไตล์ */
+.btn-pill {
+    display: inline-block;
+    background-color: #1c3f2b;
+    color: #ffffff;
+    padding: 10px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-pill:hover {
+    background-color: #2e5c41;
+    transform: translateY(-1px);
+}
+
+.btn-light {
+    background-color: #ffffff;
+    color: #1c3f2b;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-light:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- ส่วน Hero Banner ด้านบน (ฉากหลังธรรมชาติ) --- */
+.hero-section {
+    /* ใช้รูปภูเขา/ธรรมชาติ */
+    background: linear-gradient(rgba(20, 35, 25, 0.45), rgba(20, 35, 25, 0.45)), 
+                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero-subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #d1e2d7;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 46px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* --- ตาราง Profile ใน Hero Section --- */
+.profile-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 650px;
+    width: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.profile-table td {
+    padding: 25px;
+}
+
+/* รูปโปรไฟล์วงกลม */
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Challenge: เว้นระยะห่างระหว่างรูปกับตัวหนังสือ */
+.profile-info {
+    text-align: left;
+    color: #ffffff;
+    padding-left: 30px; /* ระยะห่าง */
+}
+
+.profile-info h2 {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.profile-info p {
+    font-size: 14px;
+    color: #e5ece7;
+    margin-bottom: 5px;
+}
+
+/* --- กล่องเนื้อหาทั่วไป (Cards) --- */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card-section {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f0ede6;
+}
+
+.card-section h3, .card-section h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    border-bottom: 2px solid #eef3f0;
+    padding-bottom: 8px;
+}
+
+/* รายการของกิน 3 อย่าง */
+.food-list {
+    padding-left: 20px;
+}
+
+.food-list li {
+    padding: 6px 0;
+    color: #4a574e;
+}
+
+/* --- ตาราง Skills (4 คอลัมน์) --- */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.skills-table td {
+    padding: 12px 15px;
+    border: 1px solid #e6ece8;
+    font-size: 14px;
+}
+
+.skills-table tr:nth-child(even) {
+    background-color: #fbfdfc;
+}
+
+/* --- ตาราง Experience --- */
+.exp-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.exp-table th, .exp-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eef2ef;
+}
+
+.exp-table th {
+    background-color: #1c3f2b;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* --- ฟอร์มในหน้า contact  --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2b3a30;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 25px; /* มนโค้งเหมือนในรูป */
+    border: 1px solid #ccd8d1;
+    background-color: #fafcfb;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.contact-form textarea {
+    border-radius: 16px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #1c3f2b;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* --- Footer สไตล์มินิมอล --- */
+footer {
+    text-align: center;
+    padding: 50px 20px 30px;
+    background-color: #f7f6f2;
+    border-top: 1px solid #e8e5dc;
+}
+
+.footer-logo {
+    font-size: 26px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #1c3f2b;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #7d8a81;
+    margin-top: 15px;
+}
